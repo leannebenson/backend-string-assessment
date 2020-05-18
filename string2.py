@@ -60,8 +60,25 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    alen = len(a)
+    blen = len(b)
+
+    if alen % 2 == 0:
+        aindex = alen // 2
+    else:
+        aindex = (alen //2) + 1
+    if blen % 2 == 0:
+        bindex = blen // 2
+    else:
+        bindex = (blen //2) + 1
+
+    astart = a[0:aindex]
+    aend = a[aindex:]
+
+    bstart = b[0:bindex]
+    bend = b[bindex:]
+
+    return astart + bstart + aend + bend
 
 
 # Provided simple test() function used in main() to print
